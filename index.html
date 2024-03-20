@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            /* Modern browsers */
+            font-size: 16px;
+            /* Base font size */
+            line-height: 1.6;
+            /* Line spacing */
+            color: #333;
+            /* Text color */
+        }
+
+        .container {
+            display: flex;
+            height: fit-content;
+            flex-flow: row wrap;
+            justify-content: space-around;
+        }
+
+        .session {
+            margin-top: 30px;
+            padding-top: 20px;
+            height: 550px;
+            width: 700px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+
+        }
+
+        .sessionphoto {
+            display: none;
+            height: 500px;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .caption {
+            background-color: #f2f2f2;
+            padding: 10px;
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+
+        .collapsible {
+            background-color: #f2f2f2;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 600px;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+        }
+
+        .active,
+        .collapsible:hover {
+            background-color: #ddd;
+        }
+
+        .help-content {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: #f1f1f1;
+            width: 600px;
+            box-sizing: border-box;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+        }
+
+        .pagination a {
+            border: 1px solid #ddd;
+            margin: 0 4px;
+            padding: 10px 12px;
+            text-decoration: none;
+            color: black;
+        }
+
+        .pagination a .active {
+            background-color: #eee;
+        }
+
+        .pagination a:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="collapsible">HELP / INFO</button>
+    <div class="help-content">
+        <ol>
+            <li>Find the set you are interested in on this website.</li>
+            <li>Check the filename in the caption below the image.</li>
+            <li>Search for the file with the given name in the "zip_files" directory.</li>
+        </ol>
+    </div>
+    <div class="pagination">
+        <a href="#">«</a>
+        <a href="#" class="active">1</a>
+        <a href="page2.html">2</a>
+        <a href="page3.html">3</a>
+        <a href="page4.html">4</a>
+        <a href="page5.html">5</a>
+        <a href="page6.html">6</a>
+        <a href="page7.html">7</a>
+        <a href="page8.html">8</a>
+        <a href="page9.html">9</a>
+        <a href="page10.html">10</a>
+        <a href="page2.html">»</a>
+    </div>
+    <div class="container">
+        <div class="session">
+            <img src="images/SVN001/01.jpg" class="sessionphoto" />
+            <img src="images/SVN001/02.jpg" class="sessionphoto" />
+            <img src="images/SVN001/03.jpg" class="sessionphoto" />
+            <img src="images/SVN001/04.jpg" class="sessionphoto" />
+            <div class="caption">SVN001.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN002/01.jpg" class="sessionphoto" />
+            <img src="images/SVN002/02.jpg" class="sessionphoto" />
+            <img src="images/SVN002/03.jpg" class="sessionphoto" />
+            <img src="images/SVN002/04.jpg" class="sessionphoto" />
+            <div class="caption">SVN002.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN003/01.jpg" class="sessionphoto" />
+            <img src="images/SVN003/02.jpg" class="sessionphoto" />
+            <img src="images/SVN003/03.jpg" class="sessionphoto" />
+            <img src="images/SVN003/04.jpg" class="sessionphoto" />
+            <div class="caption">SVN003.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN004/01.jpg" class="sessionphoto" />
+            <img src="images/SVN004/02.jpg" class="sessionphoto" />
+            <img src="images/SVN004/03.jpg" class="sessionphoto" />
+            <img src="images/SVN004/04.jpg" class="sessionphoto" />
+            <img src="images/SVN004/05.jpg" class="sessionphoto" />
+            <img src="images/SVN004/06.jpg" class="sessionphoto" />
+            <img src="images/SVN004/07.jpg" class="sessionphoto" />
+            <img src="images/SVN004/08.jpg" class="sessionphoto" />
+            <div class="caption">SVN004.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN006/01.jpg" class="sessionphoto" />
+            <img src="images/SVN006/02.jpg" class="sessionphoto" />
+            <img src="images/SVN006/03.jpg" class="sessionphoto" />
+            <img src="images/SVN006/04.jpg" class="sessionphoto" />
+            <div class="caption">SVN006.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN007/01.jpg" class="sessionphoto" />
+            <img src="images/SVN007/02.jpg" class="sessionphoto" />
+            <img src="images/SVN007/03.jpg" class="sessionphoto" />
+            <img src="images/SVN007/04.jpg" class="sessionphoto" />
+            <div class="caption">SVN007.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN008/01.jpg" class="sessionphoto" />
+            <img src="images/SVN008/02.jpg" class="sessionphoto" />
+            <img src="images/SVN008/03.jpg" class="sessionphoto" />
+            <img src="images/SVN008/04.jpg" class="sessionphoto" />
+            <div class="caption">SVN008.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN009/01.jpg" class="sessionphoto" />
+            <img src="images/SVN009/02.jpg" class="sessionphoto" />
+            <img src="images/SVN009/03.jpg" class="sessionphoto" />
+            <img src="images/SVN009/04.jpg" class="sessionphoto" />
+            <div class="caption">SVN009.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN011/01.jpg" class="sessionphoto" />
+            <img src="images/SVN011/02.jpg" class="sessionphoto" />
+            <img src="images/SVN011/03.jpg" class="sessionphoto" />
+            <img src="images/SVN011/04.jpg" class="sessionphoto" />
+            <div class="caption">SVN011.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN012/01.jpg" class="sessionphoto" />
+            <img src="images/SVN012/02.jpg" class="sessionphoto" />
+            <img src="images/SVN012/03.jpg" class="sessionphoto" />
+            <img src="images/SVN012/04.jpg" class="sessionphoto" />
+            <div class="caption">SVN012.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN013/01.jpg" class="sessionphoto" />
+            <img src="images/SVN013/02.jpg" class="sessionphoto" />
+            <img src="images/SVN013/03.jpg" class="sessionphoto" />
+            <img src="images/SVN013/04.jpg" class="sessionphoto" />
+            <div class="caption">SVN013.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN014/01.jpg" class="sessionphoto" />
+            <img src="images/SVN014/02.jpg" class="sessionphoto" />
+            <img src="images/SVN014/03.jpg" class="sessionphoto" />
+            <img src="images/SVN014/04.jpg" class="sessionphoto" />
+            <div class="caption">SVN014.zip</div>
+        </div>
+
+        <div class="session">
+            <img src="images/SVN015/01.jpg" class="sessionphoto" />
+            <img src="images/SVN015/02.jpg" class="sessionphoto" />
+            <img src="images/SVN015/03.jpg" class="sessionphoto" />
+            <img src="images/SVN015/04.jpg" class="sessionphoto" />
+            <div class="caption">SVN015.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN016/01.jpg" class="sessionphoto" />
+            <img src="images/SVN016/02.jpg" class="sessionphoto" />
+            <img src="images/SVN016/03.jpg" class="sessionphoto" />
+            <img src="images/SVN016/04.jpg" class="sessionphoto" />
+            <div class="caption">SVN016.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN017/01.jpg" class="sessionphoto" />
+            <img src="images/SVN017/02.jpg" class="sessionphoto" />
+            <img src="images/SVN017/03.jpg" class="sessionphoto" />
+            <img src="images/SVN017/04.jpg" class="sessionphoto" />
+            <div class="caption">SVN017.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN018/01.jpg" class="sessionphoto" />
+            <img src="images/SVN018/02.jpg" class="sessionphoto" />
+            <img src="images/SVN018/03.jpg" class="sessionphoto" />
+            <img src="images/SVN018/04.jpg" class="sessionphoto" />
+            <div class="caption">SVN018.zip</div>
+        </div>
+
+        <div class="session">
+            <img src="images/SVN019/01.jpg" class="sessionphoto" />
+            <img src="images/SVN019/02.jpg" class="sessionphoto" />
+            <img src="images/SVN019/03.jpg" class="sessionphoto" />
+            <img src="images/SVN019/04.jpg" class="sessionphoto" />
+            <div class="caption">SVN019.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN020/01.jpg" class="sessionphoto" />
+            <img src="images/SVN020/02.jpg" class="sessionphoto" />
+            <img src="images/SVN020/03.jpg" class="sessionphoto" />
+            <img src="images/SVN020/04.jpg" class="sessionphoto" />
+            <div class="caption">SVN020.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN021/01.jpg" class="sessionphoto" />
+            <img src="images/SVN021/02.jpg" class="sessionphoto" />
+            <img src="images/SVN021/03.jpg" class="sessionphoto" />
+            <img src="images/SVN021/04.jpg" class="sessionphoto" />
+            <div class="caption">SVN021.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN022/01.jpg" class="sessionphoto" />
+            <img src="images/SVN022/02.jpg" class="sessionphoto" />
+            <img src="images/SVN022/03.jpg" class="sessionphoto" />
+            <img src="images/SVN022/04.jpg" class="sessionphoto" />
+            <div class="caption">SVN022.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN023/01.jpg" class="sessionphoto" />
+            <img src="images/SVN023/02.jpg" class="sessionphoto" />
+            <img src="images/SVN023/03.jpg" class="sessionphoto" />
+            <img src="images/SVN023/04.jpg" class="sessionphoto" />
+            <div class="caption">SVN023.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN024/01.jpg" class="sessionphoto" />
+            <img src="images/SVN024/02.jpg" class="sessionphoto" />
+            <img src="images/SVN024/03.jpg" class="sessionphoto" />
+            <img src="images/SVN024/04.jpg" class="sessionphoto" />
+            <div class="caption">SVN024.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN026/01.jpg" class="sessionphoto" />
+            <img src="images/SVN026/02.jpg" class="sessionphoto" />
+            <img src="images/SVN026/03.jpg" class="sessionphoto" />
+            <img src="images/SVN026/04.jpg" class="sessionphoto" />
+            <div class="caption">SVN026.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN027/01.jpg" class="sessionphoto" />
+            <img src="images/SVN027/02.jpg" class="sessionphoto" />
+            <img src="images/SVN027/03.jpg" class="sessionphoto" />
+            <img src="images/SVN027/04.jpg" class="sessionphoto" />
+            <div class="caption">SVN027.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN028/01.jpg" class="sessionphoto" />
+            <img src="images/SVN028/02.jpg" class="sessionphoto" />
+            <img src="images/SVN028/03.jpg" class="sessionphoto" />
+            <img src="images/SVN028/04.jpg" class="sessionphoto" />
+            <div class="caption">SVN028.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN031/01.jpg" class="sessionphoto" />
+            <img src="images/SVN031/02.jpg" class="sessionphoto" />
+            <img src="images/SVN031/03.jpg" class="sessionphoto" />
+            <img src="images/SVN031/04.jpg" class="sessionphoto" />
+            <div class="caption">SVN031.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN032/01.jpg" class="sessionphoto" />
+            <img src="images/SVN032/02.jpg" class="sessionphoto" />
+            <img src="images/SVN032/03.jpg" class="sessionphoto" />
+            <img src="images/SVN032/04.jpg" class="sessionphoto" />
+            <div class="caption">SVN032.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN033/01.jpg" class="sessionphoto" />
+            <img src="images/SVN033/02.jpg" class="sessionphoto" />
+            <img src="images/SVN033/03.jpg" class="sessionphoto" />
+            <img src="images/SVN033/04.jpg" class="sessionphoto" />
+            <div class="caption">SVN033.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN034/01.jpg" class="sessionphoto" />
+            <img src="images/SVN034/02.jpg" class="sessionphoto" />
+            <img src="images/SVN034/03.jpg" class="sessionphoto" />
+            <img src="images/SVN034/04.jpg" class="sessionphoto" />
+            <div class="caption">SVN034.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN035/01.jpg" class="sessionphoto" />
+            <img src="images/SVN035/02.jpg" class="sessionphoto" />
+            <img src="images/SVN035/03.jpg" class="sessionphoto" />
+            <img src="images/SVN035/04.jpg" class="sessionphoto" />
+            <img src="images/SVN035/05.jpg" class="sessionphoto" />
+            <img src="images/SVN035/06.jpg" class="sessionphoto" />
+            <img src="images/SVN035/07.jpg" class="sessionphoto" />
+            <img src="images/SVN035/08.jpg" class="sessionphoto" />
+            <img src="images/SVN035/09.jpg" class="sessionphoto" />
+            <div class="caption">SVN035.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN036/01.jpg" class="sessionphoto" />
+            <img src="images/SVN036/02.jpg" class="sessionphoto" />
+            <img src="images/SVN036/03.jpg" class="sessionphoto" />
+            <img src="images/SVN036/04.jpg" class="sessionphoto" />
+            <img src="images/SVN036/05.jpg" class="sessionphoto" />
+            <img src="images/SVN036/06.jpg" class="sessionphoto" />
+            <img src="images/SVN036/07.jpg" class="sessionphoto" />
+            <img src="images/SVN036/08.jpg" class="sessionphoto" />
+            <img src="images/SVN036/09.jpg" class="sessionphoto" />
+            <img src="images/SVN036/10.jpg" class="sessionphoto" />
+            <div class="caption">SVN036.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN037/01.jpg" class="sessionphoto" />
+            <img src="images/SVN037/02.jpg" class="sessionphoto" />
+            <img src="images/SVN037/03.jpg" class="sessionphoto" />
+            <img src="images/SVN037/04.jpg" class="sessionphoto" />
+            <img src="images/SVN037/05.jpg" class="sessionphoto" />
+            <img src="images/SVN037/06.jpg" class="sessionphoto" />
+            <img src="images/SVN037/07.jpg" class="sessionphoto" />
+            <div class="caption">SVN037.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN038/01.jpg" class="sessionphoto" />
+            <img src="images/SVN038/02.jpg" class="sessionphoto" />
+            <img src="images/SVN038/03.jpg" class="sessionphoto" />
+            <img src="images/SVN038/04.jpg" class="sessionphoto" />
+            <img src="images/SVN038/05.jpg" class="sessionphoto" />
+            <img src="images/SVN038/06.jpg" class="sessionphoto" />
+            <img src="images/SVN038/07.jpg" class="sessionphoto" />
+            <img src="images/SVN038/08.jpg" class="sessionphoto" />
+            <img src="images/SVN038/09.jpg" class="sessionphoto" />
+            <div class="caption">SVN038.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN039/01.jpg" class="sessionphoto" />
+            <img src="images/SVN039/02.jpg" class="sessionphoto" />
+            <img src="images/SVN039/03.jpg" class="sessionphoto" />
+            <img src="images/SVN039/04.jpg" class="sessionphoto" />
+            <div class="caption">SVN039.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN039/01.jpg" class="sessionphoto" />
+            <img src="images/SVN039/02.jpg" class="sessionphoto" />
+            <img src="images/SVN039/03.jpg" class="sessionphoto" />
+            <img src="images/SVN039/04.jpg" class="sessionphoto" />
+            <div class="caption">SVN039.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN040/01.jpg" class="sessionphoto" />
+            <img src="images/SVN040/02.jpg" class="sessionphoto" />
+            <img src="images/SVN040/03.jpg" class="sessionphoto" />
+            <img src="images/SVN040/04.jpg" class="sessionphoto" />
+            <div class="caption">SVN040.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN041/01.jpg" class="sessionphoto" />
+            <img src="images/SVN041/02.jpg" class="sessionphoto" />
+            <img src="images/SVN041/03.jpg" class="sessionphoto" />
+            <img src="images/SVN041/04.jpg" class="sessionphoto" />
+            <img src="images/SVN041/05.jpg" class="sessionphoto" />
+            <img src="images/SVN041/06.jpg" class="sessionphoto" />
+            <div class="caption">SVN041.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN042/01.jpg" class="sessionphoto" />
+            <img src="images/SVN042/02.jpg" class="sessionphoto" />
+            <img src="images/SVN042/03.jpg" class="sessionphoto" />
+            <img src="images/SVN042/04.jpg" class="sessionphoto" />
+            <div class="caption">SVN042.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN043/01.jpg" class="sessionphoto" />
+            <img src="images/SVN043/02.jpg" class="sessionphoto" />
+            <img src="images/SVN043/03.jpg" class="sessionphoto" />
+            <img src="images/SVN043/04.jpg" class="sessionphoto" />
+            <div class="caption">SVN043.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN044/01.jpg" class="sessionphoto" />
+            <img src="images/SVN044/02.jpg" class="sessionphoto" />
+            <img src="images/SVN044/03.jpg" class="sessionphoto" />
+            <img src="images/SVN044/04.jpg" class="sessionphoto" />
+            <img src="images/SVN044/05.jpg" class="sessionphoto" />
+            <img src="images/SVN044/06.jpg" class="sessionphoto" />
+            <img src="images/SVN044/07.jpg" class="sessionphoto" />
+            <img src="images/SVN044/08.jpg" class="sessionphoto" />
+            <div class="caption">SVN044.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN049/01.jpg" class="sessionphoto" />
+            <img src="images/SVN049/02.jpg" class="sessionphoto" />
+            <img src="images/SVN049/03.jpg" class="sessionphoto" />
+            <img src="images/SVN049/04.jpg" class="sessionphoto" />
+            <div class="caption">SVN049.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN050/01.jpg" class="sessionphoto" />
+            <img src="images/SVN050/02.jpg" class="sessionphoto" />
+            <img src="images/SVN050/03.jpg" class="sessionphoto" />
+            <img src="images/SVN050/04.jpg" class="sessionphoto" />
+            <img src="images/SVN050/05.jpg" class="sessionphoto" />
+            <img src="images/SVN050/06.jpg" class="sessionphoto" />
+            <div class="caption">SVN050.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN051/01.jpg" class="sessionphoto" />
+            <img src="images/SVN051/02.jpg" class="sessionphoto" />
+            <img src="images/SVN051/03.jpg" class="sessionphoto" />
+            <img src="images/SVN051/04.jpg" class="sessionphoto" />
+            <img src="images/SVN051/05.jpg" class="sessionphoto" />
+            <img src="images/SVN051/06.jpg" class="sessionphoto" />
+            <img src="images/SVN051/07.jpg" class="sessionphoto" />
+            <img src="images/SVN051/08.jpg" class="sessionphoto" />
+            <img src="images/SVN051/09.jpg" class="sessionphoto" />
+            <img src="images/SVN051/10.jpg" class="sessionphoto" />
+            <div class="caption">SVN051.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN053/01.jpg" class="sessionphoto" />
+            <img src="images/SVN053/02.jpg" class="sessionphoto" />
+            <img src="images/SVN053/03.jpg" class="sessionphoto" />
+            <img src="images/SVN053/04.jpg" class="sessionphoto" />
+            <img src="images/SVN053/05.jpg" class="sessionphoto" />
+            <img src="images/SVN053/06.jpg" class="sessionphoto" />
+            <img src="images/SVN053/07.jpg" class="sessionphoto" />
+            <img src="images/SVN053/08.jpg" class="sessionphoto" />
+            <img src="images/SVN053/09.jpg" class="sessionphoto" />
+            <div class="caption">SVN053.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN054/01.jpg" class="sessionphoto" />
+            <img src="images/SVN054/02.jpg" class="sessionphoto" />
+            <img src="images/SVN054/03.jpg" class="sessionphoto" />
+            <img src="images/SVN054/04.jpg" class="sessionphoto" />
+            <img src="images/SVN054/05.jpg" class="sessionphoto" />
+            <img src="images/SVN054/06.jpg" class="sessionphoto" />
+            <img src="images/SVN054/07.jpg" class="sessionphoto" />
+            <img src="images/SVN054/08.jpg" class="sessionphoto" />
+            <img src="images/SVN054/09.jpg" class="sessionphoto" />
+            <div class="caption">SVN054.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN055/01.jpg" class="sessionphoto" />
+            <img src="images/SVN055/02.jpg" class="sessionphoto" />
+            <img src="images/SVN055/03.jpg" class="sessionphoto" />
+            <img src="images/SVN055/04.jpg" class="sessionphoto" />
+            <img src="images/SVN055/05.jpg" class="sessionphoto" />
+            <img src="images/SVN055/06.jpg" class="sessionphoto" />
+            <div class="caption">SVN055.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN056/01.jpg" class="sessionphoto" />
+            <img src="images/SVN056/02.jpg" class="sessionphoto" />
+            <img src="images/SVN056/03.jpg" class="sessionphoto" />
+            <img src="images/SVN056/04.jpg" class="sessionphoto" />
+            <img src="images/SVN056/05.jpg" class="sessionphoto" />
+            <img src="images/SVN056/06.jpg" class="sessionphoto" />
+            <div class="caption">SVN056.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN058/01.jpg" class="sessionphoto" />
+            <img src="images/SVN058/02.jpg" class="sessionphoto" />
+            <img src="images/SVN058/03.jpg" class="sessionphoto" />
+            <img src="images/SVN058/04.jpg" class="sessionphoto" />
+            <img src="images/SVN058/05.jpg" class="sessionphoto" />
+            <img src="images/SVN058/06.jpg" class="sessionphoto" />
+            <img src="images/SVN058/07.jpg" class="sessionphoto" />
+            <img src="images/SVN058/08.jpg" class="sessionphoto" />
+            <img src="images/SVN058/09.jpg" class="sessionphoto" />
+            <img src="images/SVN058/10.jpg" class="sessionphoto" />
+            <div class="caption">SVN058.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN059/01.jpg" class="sessionphoto" />
+            <img src="images/SVN059/02.jpg" class="sessionphoto" />
+            <img src="images/SVN059/03.jpg" class="sessionphoto" />
+            <img src="images/SVN059/04.jpg" class="sessionphoto" />
+            <img src="images/SVN059/05.jpg" class="sessionphoto" />
+            <img src="images/SVN059/06.jpg" class="sessionphoto" />
+            <img src="images/SVN059/07.jpg" class="sessionphoto" />
+            <img src="images/SVN059/08.jpg" class="sessionphoto" />
+            <img src="images/SVN059/09.jpg" class="sessionphoto" />
+            <img src="images/SVN059/10.jpg" class="sessionphoto" />
+            <div class="caption">SVN059.zip</div>
+        </div>
+        <div class="session">
+            <img src="images/SVN060/01.jpg" class="sessionphoto" />
+            <img src="images/SVN060/02.jpg" class="sessionphoto" />
+            <img src="images/SVN060/03.jpg" class="sessionphoto" />
+            <img src="images/SVN060/04.jpg" class="sessionphoto" />
+            <img src="images/SVN060/05.jpg" class="sessionphoto" />
+            <img src="images/SVN060/06.jpg" class="sessionphoto" />
+            <img src="images/SVN060/07.jpg" class="sessionphoto" />
+            <img src="images/SVN060/08.jpg" class="sessionphoto" />
+            <img src="images/SVN060/09.jpg" class="sessionphoto" />
+            <img src="images/SVN060/10.jpg" class="sessionphoto" />
+            <div class="caption">SVN060.zip</div>
+        </div>
+
+        <!-- 50 -->
+
+
+
+
+        <!---->
+
+
+    </div>
+    <div class="pagination">
+        <a href="#">«</a>
+        <a href="#" class="active">1</a>
+        <a href="page2.html">2</a>
+        <a href="page3.html">3</a>
+        <a href="page4.html">4</a>
+        <a href="page5.html">5</a>
+        <a href="page6.html">6</a>
+        <a href="page7.html">7</a>
+        <a href="page8.html">8</a>
+        <a href="page9.html">9</a>
+        <a href="page10.html">10</a>
+        <a href="page2.html">»</a>
+    </div>
+    <script>
+        console.log("start")
+        let sessions = document.getElementsByClassName('session');
+        for (let i = 0; i < sessions.length; i++) {
+            let session = sessions[i];
+            let images = session.getElementsByClassName('sessionphoto');
+            let currentIndex = 0;
+            let intervalId = null;
+
+            function showCurrentImage() {
+                console.log("sci")
+                for (let j = 0; j < images.length; j++) {
+                    images[j].style.display = 'none';
+                }
+                images[currentIndex].style.display = 'block';
+            }
+
+            function startSlideshow() {
+                showCurrentImage();
+                intervalId = setInterval(function () {
+                    currentIndex = (currentIndex + 1) % images.length;
+                    showCurrentImage();
+                }, 1000);
+            }
+
+            function stopSlideshow() {
+                clearInterval(intervalId);
+                // Reset to the first image
+                currentIndex = 0;
+                showCurrentImage();
+            }
+
+            // Show the first image in the session when the page loads
+            images[0].style.display = 'block';
+            // session.addEventListener('mouseover', startSlideshow);
+            session.addEventListener('mouseenter', startSlideshow);
+            // session.addEventListener('mouseout', stopSlideshow);
+            session.addEventListener('mouseleave', stopSlideshow);
+
+
+
+
+        }
+
+
+        // HELP
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

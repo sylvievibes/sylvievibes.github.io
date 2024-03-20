@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            /* Modern browsers */
+            font-size: 16px;
+            /* Base font size */
+            line-height: 1.6;
+            /* Line spacing */
+            color: #333;
+            /* Text color */
+        }
+
+        .container {
+            display: flex;
+            height: fit-content;
+            flex-flow: row wrap;
+            justify-content: space-around;
+        }
+
+        .session {
+            margin-top: 30px;
+            padding-top: 20px;
+            height: 550px;
+            width: 700px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+
+        }
+
+        .sessionphoto {
+            display: none;
+            height: 500px;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .caption {
+            background-color: #f2f2f2;
+            padding: 10px;
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+
+        .collapsible {
+            background-color: #f2f2f2;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 600px;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+        }
+
+        .active,
+        .collapsible:hover {
+            background-color: #ddd;
+        }
+
+        .help-content {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: #f1f1f1;
+            width: 600px;
+            box-sizing: border-box;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+        }
+
+        .pagination a {
+            border: 1px solid #ddd;
+            margin: 0 4px;
+            padding: 10px 12px;
+            text-decoration: none;
+            color: black;
+        }
+
+        .pagination a .active {
+            background-color: #eee;
+        }
+
+        .pagination a:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="collapsible">HELP / INFO</button>
+    <div class="help-content">
+        <ol>
+            <li>Find the set you are interested in on this website.</li>
+            <li>Check the filename in the caption below the image.</li>
+            <li>Search for the file with the given name in the "zip_files" directory.</li>
+        </ol>
+    </div>
+    <div class="pagination">
+        <a href="page6.html">«</a>
+        <a href="index.html">1</a>
+        <a href="page2.html">2</a>
+        <a href="page3.html">3</a>
+        <a href="page4.html">4</a>
+        <a href="page5.html">5</a>
+        <a href="page6.html">6</a>
+        <a href="page7.html" class="active">7</a>
+        <a href="#">»</a>
+    </div>
+    <div class="container">
+
+
+        <div class="session">
+            <img src="images/SVS0299/01.jpg" class="sessionphoto" /><img src="images/SVS0299/02.jpg"
+                class="sessionphoto" /><img src="images/SVS0299/03.jpg" class="sessionphoto" /><img
+                src="images/SVS0299/04.jpg" class="sessionphoto" /><img src="images/SVS0299/05.jpg"
+                class="sessionphoto" /><img src="images/SVS0299/06.jpg" class="sessionphoto" /><img
+                src="images/SVS0299/07.jpg" class="sessionphoto" /><img src="images/SVS0299/08.jpg"
+                class="sessionphoto" /><img src="images/SVS0299/09.jpg" class="sessionphoto" /><img
+                src="images/SVS0299/10.jpg" class="sessionphoto" />
+            <div class="caption">SVS0299.zip</div>
+        </div>
+
+
+        <div class="session">
+            <img src="images/SVS0300/01.jpg" class="sessionphoto" /><img src="images/SVS0300/02.jpg"
+                class="sessionphoto" /><img src="images/SVS0300/03.jpg" class="sessionphoto" /><img
+                src="images/SVS0300/04.jpg" class="sessionphoto" /><img src="images/SVS0300/05.jpg"
+                class="sessionphoto" /><img src="images/SVS0300/06.jpg" class="sessionphoto" /><img
+                src="images/SVS0300/07.jpg" class="sessionphoto" /><img src="images/SVS0300/08.jpg"
+                class="sessionphoto" /><img src="images/SVS0300/09.jpg" class="sessionphoto" /><img
+                src="images/SVS0300/10.jpg" class="sessionphoto" />
+            <div class="caption">SVS0300.zip</div>
+        </div>
+
+
+        <div class="session">
+            <img src="images/SVS0301/01.jpg" class="sessionphoto" /><img src="images/SVS0301/02.jpg"
+                class="sessionphoto" /><img src="images/SVS0301/03.jpg" class="sessionphoto" /><img
+                src="images/SVS0301/04.jpg" class="sessionphoto" /><img src="images/SVS0301/05.jpg"
+                class="sessionphoto" /><img src="images/SVS0301/06.jpg" class="sessionphoto" /><img
+                src="images/SVS0301/07.jpg" class="sessionphoto" /><img src="images/SVS0301/08.jpg"
+                class="sessionphoto" /><img src="images/SVS0301/09.jpg" class="sessionphoto" /><img
+                src="images/SVS0301/10.jpg" class="sessionphoto" />
+            <div class="caption">SVS0301.zip</div>
+        </div>
+
+
+        <div class="session">
+            <img src="images/SVS0302/01.jpg" class="sessionphoto" /><img src="images/SVS0302/02.jpg"
+                class="sessionphoto" /><img src="images/SVS0302/03.jpg" class="sessionphoto" /><img
+                src="images/SVS0302/04.jpg" class="sessionphoto" /><img src="images/SVS0302/05.jpg"
+                class="sessionphoto" /><img src="images/SVS0302/06.jpg" class="sessionphoto" /><img
+                src="images/SVS0302/07.jpg" class="sessionphoto" /><img src="images/SVS0302/08.jpg"
+                class="sessionphoto" /><img src="images/SVS0302/09.jpg" class="sessionphoto" /><img
+                src="images/SVS0302/10.jpg" class="sessionphoto" />
+            <div class="caption">SVS0302.zip</div>
+        </div>
+
+
+        <div class="session">
+            <img src="images/SVS0303/01.jpg" class="sessionphoto" /><img src="images/SVS0303/02.jpg"
+                class="sessionphoto" /><img src="images/SVS0303/03.jpg" class="sessionphoto" /><img
+                src="images/SVS0303/04.jpg" class="sessionphoto" /><img src="images/SVS0303/05.jpg"
+                class="sessionphoto" /><img src="images/SVS0303/06.jpg" class="sessionphoto" /><img
+                src="images/SVS0303/07.jpg" class="sessionphoto" /><img src="images/SVS0303/08.jpg"
+                class="sessionphoto" /><img src="images/SVS0303/09.jpg" class="sessionphoto" /><img
+                src="images/SVS0303/10.jpg" class="sessionphoto" />
+            <div class="caption">SVS0303.zip</div>
+        </div>
+
+
+        <div class="session">
+            <img src="images/SVS0312/01.jpg" class="sessionphoto" /><img src="images/SVS0312/02.jpg"
+                class="sessionphoto" /><img src="images/SVS0312/03.jpg" class="sessionphoto" /><img
+                src="images/SVS0312/04.jpg" class="sessionphoto" /><img src="images/SVS0312/05.jpg"
+                class="sessionphoto" /><img src="images/SVS0312/06.jpg" class="sessionphoto" /><img
+                src="images/SVS0312/07.jpg" class="sessionphoto" /><img src="images/SVS0312/08.jpg"
+                class="sessionphoto" /><img src="images/SVS0312/09.jpg" class="sessionphoto" /><img
+                src="images/SVS0312/10.jpg" class="sessionphoto" />
+            <div class="caption">SVS0312.zip</div>
+        </div>
+
+
+        <div class="session">
+            <img src="images/SVS0313/01.jpg" class="sessionphoto" /><img src="images/SVS0313/02.jpg"
+                class="sessionphoto" /><img src="images/SVS0313/03.jpg" class="sessionphoto" /><img
+                src="images/SVS0313/04.jpg" class="sessionphoto" /><img src="images/SVS0313/05.jpg"
+                class="sessionphoto" /><img src="images/SVS0313/06.jpg" class="sessionphoto" /><img
+                src="images/SVS0313/07.jpg" class="sessionphoto" /><img src="images/SVS0313/08.jpg"
+                class="sessionphoto" /><img src="images/SVS0313/09.jpg" class="sessionphoto" /><img
+                src="images/SVS0313/10.jpg" class="sessionphoto" />
+            <div class="caption">SVS0313.zip</div>
+        </div>
+
+
+        <div class="session">
+            <img src="images/SVS0317/01.jpg" class="sessionphoto" /><img src="images/SVS0317/02.jpg"
+                class="sessionphoto" /><img src="images/SVS0317/03.jpg" class="sessionphoto" /><img
+                src="images/SVS0317/04.jpg" class="sessionphoto" /><img src="images/SVS0317/05.jpg"
+                class="sessionphoto" /><img src="images/SVS0317/06.jpg" class="sessionphoto" /><img
+                src="images/SVS0317/07.jpg" class="sessionphoto" /><img src="images/SVS0317/08.jpg"
+                class="sessionphoto" /><img src="images/SVS0317/09.jpg" class="sessionphoto" /><img
+                src="images/SVS0317/10.jpg" class="sessionphoto" />
+            <div class="caption">SVS0317.zip</div>
+        </div>
+
+
+        <div class="session">
+            <img src="images/SVS0318/01.jpg" class="sessionphoto" /><img src="images/SVS0318/02.jpg"
+                class="sessionphoto" /><img src="images/SVS0318/03.jpg" class="sessionphoto" /><img
+                src="images/SVS0318/04.jpg" class="sessionphoto" /><img src="images/SVS0318/05.jpg"
+                class="sessionphoto" /><img src="images/SVS0318/06.jpg" class="sessionphoto" /><img
+                src="images/SVS0318/07.jpg" class="sessionphoto" /><img src="images/SVS0318/08.jpg"
+                class="sessionphoto" /><img src="images/SVS0318/09.jpg" class="sessionphoto" /><img
+                src="images/SVS0318/10.jpg" class="sessionphoto" />
+            <div class="caption">SVS0318.zip</div>
+        </div>
+
+
+        <div class="session">
+            <img src="images/SVS0319/01.jpg" class="sessionphoto" /><img src="images/SVS0319/02.jpg"
+                class="sessionphoto" /><img src="images/SVS0319/03.jpg" class="sessionphoto" /><img
+                src="images/SVS0319/04.jpg" class="sessionphoto" /><img src="images/SVS0319/05.jpg"
+                class="sessionphoto" /><img src="images/SVS0319/06.jpg" class="sessionphoto" /><img
+                src="images/SVS0319/07.jpg" class="sessionphoto" /><img src="images/SVS0319/08.jpg"
+                class="sessionphoto" /><img src="images/SVS0319/09.jpg" class="sessionphoto" /><img
+                src="images/SVS0319/10.jpg" class="sessionphoto" />
+            <div class="caption">SVS0319.zip</div>
+        </div>
+
+
+        <div class="session">
+            <img src="images/SVS0320/01.jpg" class="sessionphoto" /><img src="images/SVS0320/02.jpg"
+                class="sessionphoto" /><img src="images/SVS0320/03.jpg" class="sessionphoto" /><img
+                src="images/SVS0320/04.jpg" class="sessionphoto" /><img src="images/SVS0320/05.jpg"
+                class="sessionphoto" /><img src="images/SVS0320/06.jpg" class="sessionphoto" /><img
+                src="images/SVS0320/07.jpg" class="sessionphoto" /><img src="images/SVS0320/08.jpg"
+                class="sessionphoto" /><img src="images/SVS0320/09.jpg" class="sessionphoto" /><img
+                src="images/SVS0320/10.jpg" class="sessionphoto" />
+            <div class="caption">SVS0320.zip</div>
+        </div>
+
+
+        <div class="session">
+            <img src="images/SVS0321/01.jpg" class="sessionphoto" /><img src="images/SVS0321/02.jpg"
+                class="sessionphoto" /><img src="images/SVS0321/03.jpg" class="sessionphoto" /><img
+                src="images/SVS0321/04.jpg" class="sessionphoto" /><img src="images/SVS0321/05.jpg"
+                class="sessionphoto" /><img src="images/SVS0321/06.jpg" class="sessionphoto" /><img
+                src="images/SVS0321/07.jpg" class="sessionphoto" /><img src="images/SVS0321/08.jpg"
+                class="sessionphoto" /><img src="images/SVS0321/09.jpg" class="sessionphoto" /><img
+                src="images/SVS0321/10.jpg" class="sessionphoto" />
+            <div class="caption">SVS0321.zip</div>
+        </div>
+
+
+        <div class="session">
+            <img src="images/SVS0322/01.jpg" class="sessionphoto" /><img src="images/SVS0322/02.jpg"
+                class="sessionphoto" /><img src="images/SVS0322/03.jpg" class="sessionphoto" /><img
+                src="images/SVS0322/04.jpg" class="sessionphoto" /><img src="images/SVS0322/05.jpg"
+                class="sessionphoto" /><img src="images/SVS0322/06.jpg" class="sessionphoto" /><img
+                src="images/SVS0322/07.jpg" class="sessionphoto" /><img src="images/SVS0322/08.jpg"
+                class="sessionphoto" /><img src="images/SVS0322/09.jpg" class="sessionphoto" /><img
+                src="images/SVS0322/10.jpg" class="sessionphoto" />
+            <div class="caption">SVS0322.zip</div>
+        </div>
+
+
+        <div class="session">
+            <img src="images/SVS0323/01.jpg" class="sessionphoto" /><img src="images/SVS0323/02.jpg"
+                class="sessionphoto" /><img src="images/SVS0323/03.jpg" class="sessionphoto" /><img
+                src="images/SVS0323/04.jpg" class="sessionphoto" /><img src="images/SVS0323/05.jpg"
+                class="sessionphoto" /><img src="images/SVS0323/06.jpg" class="sessionphoto" /><img
+                src="images/SVS0323/07.jpg" class="sessionphoto" /><img src="images/SVS0323/08.jpg"
+                class="sessionphoto" /><img src="images/SVS0323/09.jpg" class="sessionphoto" /><img
+                src="images/SVS0323/10.jpg" class="sessionphoto" />
+            <div class="caption">SVS0323.zip</div>
+        </div>
+
+
+        <div class="session">
+            <img src="images/SVS0324/01.jpg" class="sessionphoto" /><img src="images/SVS0324/02.jpg"
+                class="sessionphoto" /><img src="images/SVS0324/03.jpg" class="sessionphoto" /><img
+                src="images/SVS0324/04.jpg" class="sessionphoto" /><img src="images/SVS0324/05.jpg"
+                class="sessionphoto" /><img src="images/SVS0324/06.jpg" class="sessionphoto" /><img
+                src="images/SVS0324/07.jpg" class="sessionphoto" /><img src="images/SVS0324/08.jpg"
+                class="sessionphoto" /><img src="images/SVS0324/09.jpg" class="sessionphoto" /><img
+                src="images/SVS0324/10.jpg" class="sessionphoto" />
+            <div class="caption">SVS0324.zip</div>
+        </div>
+
+
+        <div class="session">
+            <img src="images/SVS0325/01.jpg" class="sessionphoto" /><img src="images/SVS0325/02.jpg"
+                class="sessionphoto" /><img src="images/SVS0325/03.jpg" class="sessionphoto" /><img
+                src="images/SVS0325/04.jpg" class="sessionphoto" /><img src="images/SVS0325/05.jpg"
+                class="sessionphoto" /><img src="images/SVS0325/06.jpg" class="sessionphoto" /><img
+                src="images/SVS0325/07.jpg" class="sessionphoto" /><img src="images/SVS0325/08.jpg"
+                class="sessionphoto" /><img src="images/SVS0325/09.jpg" class="sessionphoto" /><img
+                src="images/SVS0325/10.jpg" class="sessionphoto" />
+            <div class="caption">SVS0325.zip</div>
+        </div>
+
+
+        <div class="session">
+            <img src="images/SVS0328/01.jpg" class="sessionphoto" /><img src="images/SVS0328/02.jpg"
+                class="sessionphoto" /><img src="images/SVS0328/03.jpg" class="sessionphoto" /><img
+                src="images/SVS0328/04.jpg" class="sessionphoto" /><img src="images/SVS0328/05.jpg"
+                class="sessionphoto" /><img src="images/SVS0328/06.jpg" class="sessionphoto" /><img
+                src="images/SVS0328/07.jpg" class="sessionphoto" /><img src="images/SVS0328/08.jpg"
+                class="sessionphoto" /><img src="images/SVS0328/09.jpg" class="sessionphoto" /><img
+                src="images/SVS0328/10.jpg" class="sessionphoto" />
+            <div class="caption">SVS0328.zip</div>
+        </div>
+
+
+
+
+
+        <!-- 50 -->
+    </div>
+    <div class="pagination">
+        <a href="page6.html">«</a>
+        <a href="index.html">1</a>
+        <a href="page2.html">2</a>
+        <a href="page3.html">3</a>
+        <a href="page4.html">4</a>
+        <a href="page5.html">5</a>
+        <a href="page6.html">6</a>
+        <a href="page7.html" class="active">7</a>
+        <a href="#">»</a>
+    </div>
+    <script>
+        console.log("start")
+        let sessions = document.getElementsByClassName('session');
+        for (let i = 0; i < sessions.length; i++) {
+            let session = sessions[i];
+            let images = session.getElementsByClassName('sessionphoto');
+            let currentIndex = 0;
+            let intervalId = null;
+
+            function showCurrentImage() {
+                console.log("sci")
+                for (let j = 0; j < images.length; j++) {
+                    images[j].style.display = 'none';
+                }
+                images[currentIndex].style.display = 'block';
+            }
+
+            function startSlideshow() {
+                showCurrentImage();
+                intervalId = setInterval(function () {
+                    currentIndex = (currentIndex + 1) % images.length;
+                    showCurrentImage();
+                }, 1000);
+            }
+
+            function stopSlideshow() {
+                clearInterval(intervalId);
+                // Reset to the first image
+                currentIndex = 0;
+                showCurrentImage();
+            }
+
+            // Show the first image in the session when the page loads
+            images[0].style.display = 'block';
+            // session.addEventListener('mouseover', startSlideshow);
+            session.addEventListener('mouseenter', startSlideshow);
+            // session.addEventListener('mouseout', stopSlideshow);
+            session.addEventListener('mouseleave', stopSlideshow);
+
+
+
+
+        }
+
+
+        // HELP
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
